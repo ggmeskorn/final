@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    tools:context=".InsertActivity">
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/textid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:text="Employee Form"
+        android:background="#90D2FF"/>
+
+    <TextView
+        android:id="@+id/firstname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textid"
+        android:text="Fisrstname :"
+        android:paddingTop="20dp"
+        android:paddingLeft="20dp"
+        android:textSize="20sp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="-1dp"/>
+
+    <EditText
+        android:id="@+id/firstEDT"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textid"
+        android:textSize="20sp"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/firstname"
+        android:inputType="text"/>
+    <TextView
+        android:id="@+id/lastname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/firstname"
+        android:text="Lastname :"
+        android:paddingTop="20dp"
+        android:paddingLeft="20dp"
+        android:layout_alignEnd="@+id/firstname"
+        android:textSize="20sp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="-1dp"/>
+
+    <EditText
+        android:id="@+id/lastEDT"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/firstEDT"
+        android:textSize="20sp"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/firstname"
+        android:inputType="text"/>
+
+    <TextView
+        android:id="@+id/gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lastname"
+        android:layout_marginTop="14dp"
+        android:layout_alignEnd="@+id/firstname"
+        android:text="Gender :"
+        android:textSize="20sp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lastEDT"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/gender"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/inputMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="Male"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/inputFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/radioGroup"
+            android:layout_marginLeft="15dp"
+            android:text="Female"
+            android:textSize="20sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gender"
+        android:layout_alignEnd="@+id/firstname"
+        android:layout_marginTop="14dp"
+        android:text="Select :"
+        android:textSize="20sp"/>
+    <Spinner
+        android:id="@+id/spiner_subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/select"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_alignEnd="@+id/lastEDT"
+        android:layout_below="@+id/radioGroup">
+    </Spinner>
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/select"
+        android:layout_alignEnd="@+id/firstname"
+        android:layout_marginTop="14dp"
+        android:text="Date :"
+        android:textSize="20sp"/>
+    <EditText
+        android:id="@+id/dateEDT"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spiner_subject"
+        android:textSize="20sp"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/date"
+        android:inputType="date"/>
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:text="NEXT"
+        android:layout_marginTop="50dp"
+        android:background="#00FF19"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/date"
+        android:onClick="onClickNext"/>
+    <Button
+        android:id="@+id/btncancel"
+        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_marginTop="42dp"
+        android:text="RESET"
+        android:background="#FF00FF"
+        android:layout_below="@+id/dateEDT"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:onClick="Cancel"/>
+
+</RelativeLayout>

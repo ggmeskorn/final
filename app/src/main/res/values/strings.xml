@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">lab55</string>
+    <string-array name="SelectSize_array">
+        <item>Select Size</item>
+        <item>35</item>
+        <item>40</item>
+        <item>50</item>
+    </string-array>
+    <color name="blus">#0D2CF5</color>
+</resources>
